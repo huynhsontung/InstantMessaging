@@ -226,11 +226,15 @@
     <Compile Include="Push\PushClient.cs" />
     <Compile Include="Push\PushReceivedEventArgs.cs" />
     <Compile Include="Sync\PubsubEventArgs.cs" />
+    <Compile Include="Sync\RealtimePayload.cs" />
     <Compile Include="Sync\StandalonePacketDecoder.cs" />
     <Compile Include="Sync\StandalonePacketEncoder.cs" />
     <Compile Include="Sync\MessageSyncEventArgs.cs" />
+    <Compile Include="Sync\Subs\GraphQL.cs" />
+    <Compile Include="Sync\Subs\SkyWalker.cs" />
     <Compile Include="Sync\SyncBaseData.cs" />
     <Compile Include="Sync\SyncClient.cs" />
+    <Compile Include="Sync\SyncClientX.cs" />
     <Compile Include="Sync\UserPresenceEventArgs.cs" />
     <Compile Include="Utils\CryptoHelper.cs" />
     <Compile Include="Utils\DebugLogger.cs" />
@@ -257,11 +261,11 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.3</Version>
     </PackageReference>
+    <PackageReference Include="System.Threading.Tasks.Extensions">
+      <Version>4.5.4</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.AppCenter.Crashes">
-      <HintPath>..\..\..\..\.nuget\packages\microsoft.appcenter.crashes\3.0.0\lib\uap10.0\Microsoft.AppCenter.Crashes.dll</HintPath>
-    </Reference>
     <Reference Include="Thrift">
       <HintPath>..\Thrift\Thrift.dll</HintPath>
     </Reference>

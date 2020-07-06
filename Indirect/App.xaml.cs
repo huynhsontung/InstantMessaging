@@ -155,7 +155,8 @@ namespace Indirect
             await _viewModel.TryAcquireSyncLock();
             var viewModel = ApiContainer.Instance;
             viewModel.PushClient.Start();
-            await viewModel.SyncClient.Start(viewModel.Inbox.SeqId, viewModel.Inbox.SnapshotAt);
+            //await viewModel.SyncClient.Start(viewModel.Inbox.SeqId, viewModel.Inbox.SnapshotAt);
+            await viewModel.SyncClientX.Start(viewModel.Inbox.SeqId, viewModel.Inbox.SnapshotAt);
             viewModel.UpdateInboxAndSelectedThread();
             viewModel.ReelsFeed.StartReelsFeedUpdateLoop();
         }
